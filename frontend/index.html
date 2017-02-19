@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <!-- Styles -->
+    <link href="public/styles/dashboard.css" rel="stylesheet">
+
+    <!-- Frameworks  -->
+    <script src="public/components/angular/angular.js"></script>
+    <script src="public/components/angular-ui-router/release/angular-ui-router.js"></script>
+
+    <!-- Custom modules  -->
+
+    <script src="public/routes.js"></script>
+    <script src="public/main.js"></script>
+
+    <script src="public/controller/dashboardCtrls.js"></script>
+    <script src="public/controller/navbarCtrls.js"></script>
+
+    <title>Starter project</title>
+  </head>
+  <body ng-app="main">
+    <div ui-view="navigation"></div>
+    <div ui-view="content"><div>
+  </body>
+</html>

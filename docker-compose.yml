@@ -1,0 +1,14 @@
+server:
+   build: .
+   ports:
+    - "8765:80"
+   volumes:
+    - .:/opt/src/
+   links:
+    - "mongo:database"
+mongo:
+   image: mongo:latest
+   volumes:
+    - ./data:/data/db
+   ports:
+    - "27017"
