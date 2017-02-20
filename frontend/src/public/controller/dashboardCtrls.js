@@ -5,14 +5,15 @@ dashboardCtrls.controller('dashboardCtrl',
 function($scope, $state, $http) {
   console.log("Hello world from the dashboard body");
 
-  // Simple GET request example:
+  //TODO:  Issue: The docker DNS doesn't hold for the angular frontend code, since this is executed on 
+  // the client side.
   $http({
     method: 'GET',
-    url: 'http://api:8080/api/1/test'
+    url: 'http://backend:8080/api/1/test'
   }).then(function successCallback(response) {
       console.log(response);
     }, function errorCallback(response) {
       console.log(response);
     });
-    
+
 }]);
