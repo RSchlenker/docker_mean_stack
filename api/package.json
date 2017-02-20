@@ -1,5 +1,5 @@
 {
-  "name": "web_app",
+  "name": "mean_starter_api",
   "version": "0.0.1",
   "description": "Dockerized node application",
   "main": "app.js",

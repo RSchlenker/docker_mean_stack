@@ -1,9 +1,18 @@
-server:
-   build: .
+frontend:
+   build: ./frontend/
    ports:
     - "8765:80"
    volumes:
-    - .:/opt/src/
+    - ./frontend:/opt/frontend/
+   links:
+    - "api:backend"
+    - "mongo:database"
+api:
+   build: ./api/
+   ports:
+    - "8080"
+   volumes:
+    - ./api:/opt/api/
    links:
     - "mongo:database"
 mongo:

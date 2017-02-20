@@ -6,17 +6,11 @@ const colors = require('colors');
 const bodyParser = require('body-parser');
 
 // Constants
-const PORT = 80;
+const PORT = 8080;
 const apiVersion = 1;
 
 // App
 const app = express();
-
-app.use(bodyParser.urlencoded({'extended': 'true'}));
-app.use(bodyParser.json());
-
-app.use('/public/components', express.static('./bower_components'));
-app.use(express.static('./frontend'));
 
 app.get('/api/' + apiVersion + '/test', function(req, res) {
   console.log('REQUEST ~~~ [GET] '.yellow  + 'GET TEST');
@@ -35,5 +29,5 @@ MongoClient.connect(url, function(err, db) {
 });
 
 
-app.listen(PORT);
-console.log('Webserver is running');
+app.listen(8080);
+console.log('Api is running');
