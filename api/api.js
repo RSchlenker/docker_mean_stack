@@ -3,7 +3,6 @@
 const express = require('express');
 const MongoClient = require('mongodb').MongoClient;
 const colors = require('colors');
-const bodyParser = require('body-parser');
 
 // Constants
 const PORT = 8080;

@@ -35,3 +35,6 @@ To test the functionality, check the logs and navigate your browser to *localhos
 ### Angular - API mapping.
 Since angular is executed on the client side, it doesn't know the docker-DNS resolves. How to navigate to the api?
 - Pipe through nodejs? --> The frontend-nodejs does know the backend
+
+### Docker Volumes
+Propably necessary to give read-only access for the development directory

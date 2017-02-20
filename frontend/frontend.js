@@ -19,6 +19,18 @@ app.use(bodyParser.json());
 app.use('/public/components', express.static('./bower_components'));
 app.use(express.static('./src'));
 
+app.get('\/api\/[a-zA-Z0-9/]*', function(req, res) {
+  console.log('NEW REQUEST TO: ' + req.url);
+  request('http://backend:8080' + req.url).pipe(res);
+});
+
+// TODO: Validate functionality, overall not very nice!
+app.post('\/api\/[a-zA-Z0-9/]*', funciton(req, res)) {
+  console.log('NEW POST REQUEST TO: ' + req.url);
+  request.post('http://backend:8080' + req.url, req.body).pipe(res);
+}
+
+// test backend availability
 request('http://backend:8080/api/1/test', function (error, response, body) {
   if (!error) {
     console.log("API is available");
